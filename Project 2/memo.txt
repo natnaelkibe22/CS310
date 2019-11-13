@@ -1,1 +1,25 @@
-;alkjdkjkdaf
+Name: Natnael Kibe                   Class: CS310                   
+No late day used!
+
+Question 3
+The main difference I observed between the old implementation of the DijkstraSP and the new imlementation is that the new implementation does a nice job on finding the shortest path which mean that it is the optimum solution (greedy choice) for our program. I would say the total weight is still the same in this program which mean it only made improvements on traversing small amount of edges instead of like 4 edges on old implementation where as in the new one it traversed only three edges at the last edge 0 to 7. The total weight is still the same. 
+Old implementation Output From DijkstraSP.java:
+0 to 0 (0.00)
+0 to 1 (7.32)  0->4  3.00   4->5  4.00   5->1  0.32
+0 to 2 (8.00)  0->2  8.00
+0 to 3 (7.61)  0->4  3.00   4->5  4.00   5->1  0.32   1->3  0.29
+0 to 4 (3.00)  0->4  3.00
+0 to 5 (7.00)  0->4  3.00   4->5  4.00
+0 to 6 (8.13)  0->4  3.00   4->5  4.00   5->1  0.32   1->3  0.29   3->6  0.52
+0 to 7 (9.00)  0->4  3.00   4->5  4.00   5->7  2.00
+
+My implementation Output From DijkstraTieSP.java: 
+0 to 0 (0.00) 
+0 to 1 (7.32) 0->4  3.00 4->5  4.00 5->1  0.32 
+0 to 2 (8.00) 0->2  8.00 
+0 to 3 (7.61) 0->4  3.00 4->5  4.00 5->1  0.32 1->3  0.29 
+0 to 4 (3.00) 0->4  3.00 
+0 to 5 (7.00) 0->4  3.00 4->5  4.00 
+0 to 6 (8.13) 0->4  3.00 4->5  4.00 5->1  0.32 1->3  0.29 3->6  0.52 
+0 to 7 (9.00) 0->2  8.00 2->7  1.00
+
