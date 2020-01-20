@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+    "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+
+<module name="Checker">
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="false"/>
+    </module>
+    <module name="FileLength">
+      <property name="max" value="1000"/>
+    </module>
+    <module name="TreeWalker">
+        <module name="SuppressWarnings">
+           <property name="format"
+               value="^unchecked$|^unused$"/>
+           <property name="tokens"
+              value="
+              CLASS_DEF,INTERFACE_DEF,ENUM_DEF,
+              ANNOTATION_DEF,ANNOTATION_FIELD_DEF,
+              ENUM_CONSTANT_DEF,METHOD_DEF,CTOR_DEF,
+              PARAMETER_DEF,VARIABLE_DEF
+          "/>
+        </module>
+        <module name="EmptyBlock">
+            <property name="option" value="text"/>
+        </module>
+        <module name="AvoidNestedBlocks"/>
+        <module name="VisibilityModifier"/>
+        <module name="InterfaceIsType"/>
+        <module name="MutableException"/>
+        <module name="EmptyStatement"/>
+        <module name="HiddenField">
+          <property name="tokens" value="VARIABLE_DEF"/>
+        </module>
+        <module name="IllegalInstantiation"/>
+        <module name="InnerAssignment"/>
+        <module name="ModifiedControlVariable"/>
+        <module name="SimplifyBooleanExpression"/>
+        <module name="SimplifyBooleanReturn"/>
+        <module name="StringLiteralEquality"/>
+        <module name="NestedForDepth">
+            <property name="max" value="4"/>
+        </module>
+        <module name="NestedIfDepth">
+            <property name="max" value="3"/>
+        </module>
+        <module name="NestedTryDepth">
+            <property name="max" value="1"/>
+        </module>
+        <module name="NoClone"/>
+        <module name="NoFinalizer"/>
+        <module name="SuperClone"/>
+        <module name="SuperFinalize"/>
+        <module name="IllegalCatch"/>
+        <module name="DeclarationOrder"/>
+        <!-- <module name="ParameterAssignment"/> -->
+        <module name="DefaultComesLast"/>
+        <module name="FallThrough">
+           <property name="reliefPattern" value="continue in next case"/>
+        </module>
+        <module name="OneStatementPerLine"/>
+        <module name="AvoidStarImport"/>
+        <module name="AvoidStaticImport"/>
+        <module name="RedundantImport"/>
+        <module name="UnusedImports"/>
+        <module name="TodoComment">
+          <property name="format" value="TBD"/>
+        </module>
+        <module name="UpperEll"/>
+        <module name="ArrayTypeStyle"/>
+        <module name="OuterTypeFilename"/>
+        <module name="ModifierOrder"/>
+        <module name="RedundantModifier"/>
+        <module name="ConstantName"/>
+        <module name="LocalFinalVariableName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$"/>
+        </module>
+        <module name="LocalVariableName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$"/>
+        </module>
+        <module name="MemberName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$"/>
+        </module>
+        <module name="MethodName"> 
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$"/>
+        </module>
+        <module name="PackageName">
+            <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
+        </module>
+        <module name="PackageName"/>
+        <module name="ParameterName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$|^[A-Z]$"/>
+        </module>
+        <module name="StaticVariableName"> 
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$"/>
+        </module>
+        <module name="TypeName"/>
+        <module name="RegexpSinglelineJava">
+            <property name="format" value="System\.exit"/>
+            <property name="ignoreComments" value="true"/>
+            <property name="message" value="Not permitted to call System.exit()"/>
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="format" value="Math\.pow\([^,]*, 2\)"/>
+            <property name="ignoreComments" value="true"/>
+            <property name="message" value="Use x*x instead of Math.pow(x, 2)"/>
+        </module>
+        <module name="RegexpSinglelineJava">
+            <property name="format" value="Math\.pow\([^,]*, 3\)"/>
+            <property name="ignoreComments" value="true"/>
+            <property name="message" value="Use x*x*x instead of Math.pow(x, 3)"/>
+        </module>
+        <module name="LineLength">
+            <property name="max" value="80"/>
+        </module>
+        <module name="MethodLength">
+          <property name="tokens" value="METHOD_DEF"/>
+          <property name="max" value="100"/>
+        </module>
+        <module name="AnonInnerLength"/>
+        <module name="ParameterNumber"/>
+        <module name="OuterTypeNumber"/>
+        <module name="MethodCount"/>
+        <module name="GenericWhitespace"/>
+        <module name="EmptyForInitializerPad"/>
+        <module name="EmptyForIteratorPad"/>
+        <module name="MethodParamPad"/>
+        <module name="NoWhitespaceAfter">
+           <property name="tokens" value="BNOT, DEC, DOT, INC, LNOT, UNARY_MINUS, UNARY_PLUS"/>
+         </module>
+        <module name="NoWhitespaceBefore"/>
+        <module name="OperatorWrap"/>
+        <module name="ParenPad"/>
+        <module name="TypecastParenPad"/>
+        <module name="WhitespaceAfter"/>
+        <module name="WhitespaceAround">
+           <property name="tokens"
+            value="ASSIGN, BAND, BAND_ASSIGN, BOR, BOR_ASSIGN, BSR, 
+                   BSR_ASSIGN, BXOR, BXOR_ASSIGN, COLON,  DIV_ASSIGN,
+                   EQUAL, GE, GT, LAND, LCURLY, LE, LITERAL_ASSERT,
+                   LITERAL_CATCH, LITERAL_DO, LITERAL_ELSE, LITERAL_FINALLY,
+                   LITERAL_FOR, LITERAL_IF, LITERAL_RETURN, LITERAL_SYNCHRONIZED,
+                   LITERAL_TRY, LITERAL_WHILE, LOR, LT, MINUS_ASSIGN, MOD,
+                   MOD_ASSIGN, NOT_EQUAL, PLUS_ASSIGN, QUESTION, RCURLY,
+                   SL, SLIST, SL_ASSIGN, SR, SR_ASSIGN, STAR_ASSIGN,
+                   TYPE_EXTENSION_AND"/>
+        </module>
+    </module>
+</module>
